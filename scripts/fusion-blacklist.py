@@ -7,6 +7,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     genere = re.compile(r'gene_id "(.*?)"')
     symbolre = re.compile(r'gene_name "(.*?)"')
+    print "id,symbol"
     with open(args.intersect) as in_handle:
         for line in in_handle:
             genes = re.findall(genere, line)
@@ -14,4 +15,4 @@ if __name__ == "__main__":
             if len(set(genes)) == 1:
                 continue
             else:
-                print ":".join(genes), ":".join(symbols)
+                print ":".join(genes) + "," + ":".join(symbols)
