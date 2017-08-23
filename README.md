@@ -24,3 +24,9 @@ python scripts/fusion-blacklist.py intersect.tsv | sort | uniq > GRCh38.89-black
 
 This will make a CSV file of all gene_idA:gene_idB and gene_nameA:gene_nameB fusions which could be
 caused by two genes with overlapping annotations.
+
+## Contributing
+Pull requests are very welcome. This list is likely to be simultaneously way
+too restrictive to be a real blacklist and too lax to miss other types of
+commonly miscalled fusions. It would also be nice to compile a whitelist of
+known fusions as well.
